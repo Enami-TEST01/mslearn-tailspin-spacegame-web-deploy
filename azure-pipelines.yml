@@ -215,7 +215,8 @@ stages:
   jobs:
   - deployment: Deploy
     pool:
-      vmImage: 'ubuntu-18.04'
+      # vmImage: 'ubuntu-18.04'
+      vmImage: 'windows-2019'
     environment: staging
     variables:
     - group: 'Release'
