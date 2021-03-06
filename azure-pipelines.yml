@@ -241,7 +241,7 @@ stages:
             inputs:
               contents: |
                 Tailspin.SpaceGame.Database/bin/**/*.dacpac
-                targetFolder: '$(Build.StagingDirectory)'
+              targetFolder: '$(Build.StagingDirectory)'
 
           - task: PublishBuildArtifacts@1
             displayName: 'Publish Artifact'
@@ -249,5 +249,3 @@ stages:
               pathToPublish: '$(Build.ArtifactStagingDirectory)'
               artifactName: dropDacpac
             condition: succeededOrFailed()
-
-            
